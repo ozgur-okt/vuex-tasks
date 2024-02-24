@@ -23,7 +23,11 @@ export default {
       return this.selectedType.charAt(0).toUpperCase() + this.selectedType.slice(1) + " Tasks"
     },
     filteredData() {
-      return this.data.filter(item => item.occurrence === this.selectedType)
+      if (this.selectedType === 'all') {
+        return this.data
+      } else {
+        return this.data.filter(item => item.occurrence === this.selectedType)
+      }
     }
   }
 }

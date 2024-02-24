@@ -2,14 +2,13 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import { createRouter, createWebHistory } from "vue-router";
 import store from './store';
-import AllTasks from './views/AllTasks.vue'
 import FilteredTasks from './views/FilteredTasks.vue'
 
 const routes = [
   {
     path: '/',
     name: 'all',
-    component: AllTasks
+    component: FilteredTasks
   },
   {
     path: '/weekly',
