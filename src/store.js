@@ -11,7 +11,7 @@ export default createStore({
       state.data = data;
     },
     setSelectedType(state, type) {
-      state.selectedType = type
+      state.selectedType = type;
     },
   },
   actions: {
