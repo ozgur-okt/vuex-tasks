@@ -1,6 +1,9 @@
 <template>
-  <div>
-    <h1>{{ capitalizedSelectedType }}</h1>
+  <div class="tasks">
+    <h1 class="header">
+      {{ capitalizedSelectedType }}
+      <span class="badge">{{ data.length }}</span>
+    </h1>
     <SingleTask v-for="(item, index) in data" :key="index" :item="item"/>
   </div>
 </template>
@@ -22,3 +25,27 @@ export default {
   }
 }
 </script>
+
+<style>
+.tasks {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 0.8em;
+  margin-left: 10px;
+  width: 30px;
+}
+</style>
