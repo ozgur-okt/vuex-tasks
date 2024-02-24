@@ -41,14 +41,14 @@ export default {
   data() {
     return {
       seeMore: false
-    }
+    };
   },
   methods: {
     toggleSeeMore() {
-      this.seeMore = !this.seeMore
+      this.seeMore = !this.seeMore;
     }
   }
-}
+};
 </script>
 
 <style>

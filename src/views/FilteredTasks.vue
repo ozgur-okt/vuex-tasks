@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import SingleTask from '../components/SingleTask.vue'
+import { mapGetters } from 'vuex';
+import SingleTask from '../components/SingleTask.vue';
 
 export default {
   name: 'FilteredTasks',
@@ -20,17 +20,17 @@ export default {
   computed: {
     ...mapGetters(['data', 'selectedType']),
     capitalizedSelectedType() {
-      return this.selectedType.charAt(0).toUpperCase() + this.selectedType.slice(1) + " Tasks"
+      return this.selectedType.charAt(0).toUpperCase() + this.selectedType.slice(1) + ' Tasks';
     },
     filteredData() {
       if (this.selectedType === 'all') {
-        return this.data
+        return this.data;
       } else {
-        return this.data.filter(item => item.occurrence === this.selectedType)
+        return this.data.filter(item => item.occurrence === this.selectedType);
       }
     }
   }
-}
+};
 </script>
 <style>
 .tasks {

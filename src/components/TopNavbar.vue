@@ -15,10 +15,10 @@ export default {
   name: 'TopNavbar',
   methods: {
     selectType(type) {
-      this.$store.commit('setSelectedType', type)
+      this.$store.commit('setSelectedType', type);
     }
   }
-}
+};
 </script>
 <style>
 .navbar {

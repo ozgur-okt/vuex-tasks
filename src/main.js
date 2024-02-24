@@ -1,36 +1,35 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import { createRouter, createWebHistory } from "vue-router";
+import { createApp } from 'vue';
+import { createRouter, createWebHistory } from 'vue-router';
+import App from './App.vue';
 import store from './store';
-import FilteredTasks from './views/FilteredTasks.vue'
+import FilteredTasks from './views/FilteredTasks.vue';
 
 const routes = [
   {
     path: '/',
     name: 'all',
-    component: FilteredTasks
+    component: FilteredTasks,
   },
   {
     path: '/weekly',
     name: 'weekly',
-    component: FilteredTasks
+    component: FilteredTasks,
   },
   {
     path: '/daily',
     name: 'daily',
-    component: FilteredTasks
+    component: FilteredTasks,
   },
   {
     path: '/monthly',
     name: 'monthly',
-    component: FilteredTasks
-  }
-]
-
+    component: FilteredTasks,
+  },
+];
 
 const router = createRouter({
-history: createWebHistory(),
-routes
-})
+  history: createWebHistory(),
+  routes,
+});
 
-createApp(App).use(router).use(store).mount('#app')
+createApp(App).use(router).use(store).mount('#app');

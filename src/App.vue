@@ -15,9 +15,9 @@ export default {
     TopNavbar
   },
   created() {
-    this.$store.dispatch('fetchData')
+    this.$store.dispatch('fetchData');
   }
-}
+};
 </script>
 
 <style>
